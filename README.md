@@ -1,0 +1,2 @@
+# bitmapTransformer
+Transforms a bmp

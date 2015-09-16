@@ -2,7 +2,7 @@
 
 var fs = require('fs');
 
-fs.readFile('palette-bitmap.bmp', function (err, data) {
+fs.readFile('./lib/palette-bitmap.bmp', function (err, data) {
   if (err) throw err;
   var palette = data.slice(54 , 182);
   var testSlice= [];
@@ -18,7 +18,7 @@ fs.readFile('palette-bitmap.bmp', function (err, data) {
     testSlice[i] = pixAve;
     }
   }
-  fs.writeFile('palette-bitmap3.bmp', data, function (err) {
+  fs.writeFile('./lib/palette-bitmap3.bmp', data, function (err) {
   if (err) throw err;
   console.log('It\'s saved!');
   });
